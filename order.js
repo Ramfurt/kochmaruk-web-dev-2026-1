@@ -1,16 +1,9 @@
-// ===============================
-// ФАЙЛ order.js - История заказов
-// ===============================
 
 // Загружаем заказы из localStorage
 let orders = JSON.parse(localStorage.getItem('orders')) || [];
 
 // УДАЛЯЕМ тестовые данные - они больше не добавляются автоматически
-// if (orders.length === 0) {
-//     console.log("No orders found, adding test data...");
-//     orders = [ ... ];
-//     localStorage.setItem('orders', JSON.stringify(orders));
-// }
+
 
 // Сортируем по дате (новые сначала)
 if (orders.length > 0) {
