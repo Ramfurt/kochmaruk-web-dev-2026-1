@@ -6,13 +6,16 @@
     <meta name="description" content="Valorant skins marketplace - buy premium skins for your favorite agents">
     <meta name="author" content="Ramfurt">
     <title>Valorant Skins Marketplace</title>
+
     
-    
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    
+    <link rel="icon" href="images/GENGEGENGE.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+
     
     <link rel="stylesheet" href="about_us.css">
-    
+
    
     <meta property="og:title" content="Valorant Skins Marketplace">
     <meta property="og:description" content="Buy and sell premium Valorant skins">
@@ -22,10 +25,12 @@
 </head>
 
 <body>
-    <div class="up_name">
+
+  
+    <div class="up_name text-center text-md-start">
         <h1>VALORANT SKINS</h1>
     </div>
-    
+
     <header>
         <nav>
             <ul class="buttons">
@@ -39,74 +44,142 @@
             </ul>
         </nav>
     </header>
+
+ 
+    <main class="container my-4">
+       
+        <section class="row g-4 align-items-center mb-5 about-section"> //Сетка (Grid system)
+            <div class="col-lg-6">
+                <h2 class="about-title display-4">ABOUT US</h2>
+                <p class="lead">
+                    Valorant Skins Marketplace is the premier destination for buying and selling premium Valorant skins.
+                    We offer a secure platform where players can trade their favorite weapon skins, from exclusive collections
+                    to rare limited editions. Join thousands of satisfied customers and enhance your Valorant experience today!
+                    <br><span class="text-danger">(waiting for Kuronami day 30)</span>
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/valorant-banner.jpg" alt="Valorant Skins Marketplace - Buy premium skins" class="img-fluid about-image">
+            </div>
+        </section>
+
+       
+        <section class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center text-uppercase border-bottom pb-2">WHY CHOOSE US:</h2>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="advantages-list-item">
+                    <h3>⚡ Instant delivery</h3>
+                    <p>Receive skins immediately after purchase.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="advantages-list-item">
+                    <h3>🔒 100% secure transactions</h3>
+                    <p>Your data is always protected.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="advantages-list-item">
+                    <h3>💰 Best Prices</h3>
+                    <p>Competitive prices on all Valorant skins. Except for Sberbank.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="advantages-list-item">
+                    <h3>🕐 24/7 support</h3>
+                    <p>We're always here to help you.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="advantages-list-item">
+                    <h3>✅ Verified sellers</h3>
+                    <p>All sellers are thoroughly checked.</p>
+                </div>
+            </div>
+        </section>
+
+      
+        <section class="row justify-content-center text-center my-5 py-4 bg-danger bg-opacity-10 rounded">
+            <div class="col-md-8">
+                <h2 class="display-5 fw-bold">READY TO UPGRADE YOUR ARSENAL?</h2>
+                <p class="lead">Choose your favorite skins and build your perfect loadout right now.</p>
+                <a href="create_lunch.html" class="btn btn-danger btn-lg px-5 py-3 mt-2">📦 ASSEMBLE YOUR LUNCH</a>
+            </div>
+        </section>
+
+       
+        <section class="row g-4 mb-4" id="contacts">
+            <div class="col-lg-6">
+                <h2 class="about-title h2">CONTACT US</h2>
+                <p class="mb-2">✉️ support@valorantskins.com</p>
+                <p class="mb-2">💬 Discord: .gg/valorantskins</p>
+                <p class="mb-4">📍 Based in the cloud, serving worldwide</p>
+
+                <h3 class="h4 text-uppercase">Follow us</h3>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-danger text-decoration-none">Twitter</a>
+                    <a href="#" class="text-danger text-decoration-none">Instagram</a>
+                    <a href="#" class="text-danger text-decoration-none">Discord</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <form class="bg-dark bg-opacity-25 p-4 rounded">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your name</label>
+                        <input type="text" class="form-control bg-dark text-light border-danger" id="name" placeholder="Jett">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control bg-dark text-light border-danger" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control bg-dark text-light border-danger" id="message" rows="3" placeholder="I have a question about..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Send message</button>
+                </form>
+            </div>
+        </section>
+
+        
+        <section class="row">
+            <div class="col-12">
+                <h2 class="text-center text-uppercase border-bottom pb-2">TOP 5 POPULAR SKINS:</h2>
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-bordered border-danger">
+                        <thead class="bg-danger text-dark">
+                            <tr>
+                                <th>RANK</th>
+                                <th>SKIN NAME</th>
+                                <th>COLLECTION</th>
+                                <th>PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>#1</td><td>Reaver Vandal</td><td>Reaver Collection</td><td>1775 VP</td></tr>
+                            <tr><td>#2</td><td>Prime Phantom</td><td>Prime Collection</td><td>1775 VP</td></tr>
+                            <tr><td>#3</td><td>RGX 11z Pro Blade</td><td>RGX 11z Pro</td><td>2175 VP</td></tr>
+                            <tr><td>#4</td><td>Ion Operator</td><td>Ion Collection</td><td>1775 VP</td></tr>
+                            <tr><td>#5</td><td>Elderflame Vandal</td><td>Elderflame</td><td>2475 VP</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
     
-    <div class="about-section" id="about-us">
-        <img src="images/valorant-banner.jpg" alt="Valorant Skins Marketplace - Buy premium skins" class="about-image">
-        <h2 class="about-title">ABOUT US</h2>
-        <p class="about-description">
-            <h3>Valorant Skins Marketplace is the premier destination for buying and selling premium Valorant skins. 
-            We offer a secure platform where players can trade their favorite weapon skins, from exclusive collections 
-            to rare limited editions. Join thousands of satisfied customers and enhance your Valorant experience today! (waiting for Kuronami day 30)</h3>
-        </p>
-    </div>
-    
-    <h2>WHY CHOOSE US:</h2>
-    
-    <ul class="advantages-list">
-        <li>- Instant delivery - receive skins immediately after purchase.</li>
-        <li>- 100% secure transactions - Your data is always protected</li>
-        <li>- Best Prices - Competitive prices on all Valorant skins. Except for Sberbank.</li>
-        <li>- 24/7 support - We're always here to help you</li>
-        <li>- Verified sellers - All sellers are thoroughly checked</li>
-    </ul>
-    
-    <h2>TOP 5 POPULAR SKINS:</h2>
-    
-    <div class="table">
-        <table>
-            <tr>
-                <th>RANK</th>
-                <th>SKIN NAME</th>
-                <th>COLLECTION</th>
-                <th>PRICE</th>
-            </tr>
-            <tr>
-                <td>#1</td>
-                <td>Reaver Vandal</td>
-                <td>Reaver Collection</td>
-                <td>1775 VP</td>
-            </tr>
-            <tr>
-                <td>#2</td>
-                <td>Prime Phantom</td>
-                <td>Prime Collection</td>
-                <td>1775 VP</td>
-            </tr>
-            <tr>
-                <td>#3</td>
-                <td>RGX 11z Pro Blade</td>
-                <td>RGX 11z Pro</td>
-                <td>2175 VP</td>
-            </tr>
-            <tr>
-                <td>#4</td>
-                <td>Ion Operator</td>
-                <td>Ion Collection</td>
-                <td>1775 VP</td>
-            </tr>
-            <tr>
-                <td>#5</td>
-                <td>Elderflame Vandal</td>
-                <td>Elderflame</td>
-                <td>2475 VP</td>
-            </tr>
-        </table>
-    </div>
-    
-    <footer id="contacts">
-        <p><h2>&copy; 2025 VALORANT SKINS MARKETPLACE</h2></p>
-        <p>Contact us: support@valorantskins.com | Discord: .gg/valorantskins</p>
+    <footer class="text-center py-4 mt-auto" id="contacts-footer">
+        <p class="mb-1"><span class="fw-bold">&copy; 2025 VALORANT SKINS MARKETPLACE</span></p>
+        <p class="mb-0">Contact us: support@valorantskins.com | Discord: .gg/valorantskins</p>
     </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script src="script.js"></script>
 </body>
