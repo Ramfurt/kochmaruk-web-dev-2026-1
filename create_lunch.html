@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Valorant Skins</title>
+    <link rel="stylesheet" href="create_lunch.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="buttons">
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="#contacts">CONTACT</a></li>
+                <li><a href="create_lunch.html">BROWSE SKINS</a></li>
+                <li><a href="place_an_order.html">CHECKOUT</a></li>
+                <li><a href="order.html">ORDERS</a></li>
+                <li><a href="feedback_form.html">FEEDBACK</a></li>
+                <li><a href="authentication.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <header class="up_name">
+        <h1>BROWSE SKINS</h1>
+    </header>
+    
+    <main>
+        <!-- Наборы скинов -->
+        <section id="skin-bundles" class="combos section">
+            <div class="centered-title"><h2>POPULAR BUNDLES</h2></div>
+            
+            <div class="combo" tabindex="0" data-combo-id="1">
+                <h3>Reaver Collection</h3>
+                <p class="combo-items">Reaver Vandal, Reaver Phantom, Reaver Operator, Reaver Sheriff</p>
+                <div class="combo-meta">Price: 7100 VP (Save 20%)</div>
+            </div>
+            
+            <div class="combo" tabindex="0" data-combo-id="2">
+                <h3>Prime Collection</h3>
+                <p class="combo-items">Prime Vandal, Prime Phantom, Prime Axe</p>
+                <div class="combo-meta">Price: 5350 VP (Save 15%)</div>
+            </div>
+            
+            <div class="combo" tabindex="0" data-combo-id="3">
+                <h3>RGX 11z Pro Bundle</h3>
+                <p class="combo-items">RGX Vandal, RGX Phantom, RGX Blade, RGX Sheriff</p>
+                <div class="combo-meta">Price: 8700 VP (Save 25%)</div>
+            </div>
+        </section>
+        
+        <!-- Фильтры для скинов -->
+        <section id="weapon-items" class="section">
+            <div class="centered-title"><h2>WEAPON SKINS</h2></div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vandal">Vandal</button>
+                <button class="filter-btn" data-filter="phantom">Phantom</button>
+                <button class="filter-btn" data-filter="operator">Operator</button>
+                <button class="filter-btn" data-filter="pistol">Pistols</button>
+            </div>
+            <div class="items-grid">
+                
+                <div class="item" data-id="skin1" data-name="Reaver Vandal" data-price="1775" data-type="vandal">
+                    <img src="images/reaver-vandal.jpg" alt="Reaver Vandal Skin">
+                    <div class="item-info">
+                        <h4>Reaver Vandal</h4>
+                        <div class="price">1775 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+                
+                <div class="item" data-id="skin2" data-name="Prime Phantom" data-price="1775" data-type="phantom">
+                    <img src="images/prime-phantom.jpg" alt="Prime Phantom Skin">
+                    <div class="item-info">
+                        <h4>Prime Phantom</h4>
+                        <div class="price">1775 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+              
+                <div class="item" data-id="skin3" data-name="Ion Operator" data-price="1775" data-type="operator">
+                    <img src="images/ion-operator.jpg" alt="Ion Operator Skin">
+                    <div class="item-info">
+                        <h4>Ion Operator</h4>
+                        <div class="price">1775 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+                
+                <div class="item" data-id="skin4" data-name="RGX Sheriff" data-price="1775" data-type="pistol">
+                    <img src="images/rgx-sheriff.jpg" alt="RGX Sheriff Skin">
+                    <div class="item-info">
+                        <h4>RGX Sheriff</h4>
+                        <div class="price">1775 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+              
+                <div class="item" data-id="skin5" data-name="Elderflame Vandal" data-price="2475" data-type="vandal">
+                    <img src="images/elderflame-vandal.jpg" alt="Elderflame Vandal">
+                    <div class="item-info">
+                        <h4>Elderflame Vandal</h4>
+                        <div class="price">2475 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+               
+                <div class="item" data-id="skin6" data-name="Glitchpop Phantom" data-price="2175" data-type="phantom">
+                    <img src="images/glitchpop-phantom.jpg" alt="Glitchpop Phantom">
+                    <div class="item-info">
+                        <h4>Glitchpop Phantom</h4>
+                        <div class="price">2175 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </section>
+        
+    
+        <section id="melee-items" class="section">
+            <div class="centered-title"><h2>MELEE SKINS</h2></div>
+            <div class="filters">
+                <button class="melee-filter-btn active" data-filter="all">All</button>
+                <button class="melee-filter-btn" data-filter="knife">Knives</button>
+                <button class="melee-filter-btn" data-filter="axe">Axes</button>
+                <button class="melee-filter-btn" data-filter="sword">Swords</button>
+            </div>
+            <div class="items-grid">
+                
+                <div class="item" data-id="melee1" data-name="RGX Blade" data-price="3550" data-type="knife">
+                    <img src="images/rgx-blade.jpg" alt="RGX Blade">
+                    <div class="item-info">
+                        <h4>RGX Blade</h4>
+                        <div class="price">3550 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+                
+                
+                <div class="item" data-id="melee2" data-name="Reaver Knife" data-price="3550" data-type="knife">
+                    <img src="images/reaver-knife.jpg" alt="Reaver Knife">
+                    <div class="item-info">
+                        <h4>Reaver Knife</h4>
+                        <div class="price">3550 VP</div>
+                    </div>
+                    <button class="add-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="section">
+            <a href="place_an_order.html" class="primary-btn">PROCEED TO CHECKOUT</a>
+        </div>
+    </main>
+    
+    <footer id="contacts">
+        <p>Contact: support@valorantskins.com | Discord: .gg/valorantskins</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

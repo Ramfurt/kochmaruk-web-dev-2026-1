@@ -1,0 +1,266 @@
+@font-face {
+    font-family: 'perpetua';
+    src: url('fonts/perpetua.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanPro';
+    src: url('TrajanPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Valorant';
+    src: url('fonts/Valorant-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f1923;
+    color: #ece8e1;
+    min-height: 100vh;
+    font-size: 25px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 200px;
+    font-family: 'perpetua', 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.up_name {
+    margin-bottom: 3px;
+}
+
+.up_name h1 {
+    font-family: 'Valorant', 'TrajanPro', serif !important;
+    font-size: 80px;
+    color: #ff4654;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
+}
+
+/* Навигация */
+.buttons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 4%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.buttons li {
+    position: relative;
+    text-align: center;
+}
+
+.buttons li a {
+    text-decoration: none;
+    color: #ece8e1;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    min-width: 150px;
+    font-family: 'Valorant', 'perpetua', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.buttons li a:hover {
+    color: #ffffff;
+    border: 2px solid #ff4654;
+    background-color: rgba(255, 70, 84, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 70, 84, 0.3);
+}
+
+/* Контейнер формы */
+.container {
+    background: linear-gradient(145deg, #1f2c3a, #0f1923);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ff4654;
+    box-shadow: 0 0 30px rgba(255, 70, 84, 0.3);
+    margin: 50px 0;
+    width: 100%;
+}
+
+.container h1 {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 20px 0 5px 0;
+    color: #ece8e1;
+    font-family: 'Valorant', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ece8e1;
+    font-family: 'perpetua', serif;
+    text-transform: none;
+}
+
+/* Поля ввода */
+input[type="text"],
+input[type="email"],
+input[type="file"],
+select,
+textarea {
+    padding: 15px;
+    background-color: #1f2c3a;
+    border: 2px solid #ff4654;
+    border-radius: 10px;
+    color: #ece8e1;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 70, 84, 0.5);
+    transform: scale(1.01);
+}
+
+/* Радио кнопки */
+input[type="radio"] {
+    accent-color: #ff4654;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Чекбокс */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 70, 84, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #ff4654;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff4654;
+}
+
+.checkbox-label h3 {
+    margin: 0;
+    color: #ece8e1;
+}
+
+/* Кнопка отправки */
+button[type="submit"] {
+    padding: 15px 30px;
+    background: #ff4654;
+    color: #0f1923;
+    font-family: 'Valorant', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+button[type="submit"]:hover {
+    background: #ff6a76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 70, 84, 0.5);
+}
+
+/* Футер */
+#contacts {
+    background-color: #1f2c3a;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    border-top: 3px solid #ff4654;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+#contacts p {
+    color: #ece8e1;
+    font-size: 20px;
+}
+
+#contacts h2 {
+    color: #ff4654;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    body {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 50px;
+    }
+    
+    .up_name h1 {
+        font-size: 50px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .container h1 {
+        font-size: 36px;
+    }
+}
