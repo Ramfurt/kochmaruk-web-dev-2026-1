@@ -1,13 +1,7 @@
-// ===============================
-// ФАЙЛ script.js - Valorant Skins Marketplace
-// ===============================
 
-// Замените на ваш реальный URL приемника заказа (или оставьте пустым для локальной работы)
-const SUBMIT_URL = ""; // например: "https://your-api.com/orders"
+const SUBMIT_URL = ""; 
 
-// -----------------------------
-// ДАННЫЕ КОМБО-НАБОРОВ (скины Valorant)
-// -----------------------------
+
 const COMBOS = {
   1: { 
     id: 1, 
@@ -76,9 +70,9 @@ const ALL_SKINS = [
   { id: "glitchpop-knife", name: "Glitchpop Knife", price: 3550, img: "images/glitchpop-knife.jpg", type: "melee", collection: "Glitchpop" }
 ];
 
-// -----------------------------
+
 // ВНУТРЕННЕЕ СОСТОЯНИЕ ЗАКАЗА
-// -----------------------------
+
 let order = {}; // ключ = itemId, value = { id, name, price, qty, img, type }
 
 // -----------------------------
@@ -90,7 +84,7 @@ function formatPrice(n) {
     return Number(n).toFixed(0); 
 }
 
-// Показать уведомление в стиле Valorant
+// ппоказать уведомление в стиле Valorant
 function showValorantNotification(message, isError = false) {
     const notification = document.createElement('div');
     notification.style.cssText = `
@@ -118,11 +112,10 @@ function showValorantNotification(message, isError = false) {
     }, 3000);
 }
 
-// -----------------------------
-// ФУНКЦИИ РАБОТЫ С ЗАКАЗОМ
-// -----------------------------
 
-// Добавление/увеличение позиции
+// ФУНКЦИИ РАБОТЫ С ЗАКАЗОМ
+
+// добавление/увеличение позиции
 function addToOrder(item) {
     if (!item || !item.id) return;
     
@@ -138,7 +131,7 @@ function addToOrder(item) {
     renderOrder();
 }
 
-// Уменьшение количества
+// уменьшение количества
 function decreaseQty(itemId) {
     if (!order[itemId]) return;
     
@@ -154,7 +147,7 @@ function decreaseQty(itemId) {
     renderOrder();
 }
 
-// Увеличение количества
+// увеличение количества
 function increaseQty(itemId) {
     if (!order[itemId]) return;
     
@@ -165,7 +158,7 @@ function increaseQty(itemId) {
     renderOrder();
 }
 
-// Сброс заказа
+// сброс заказа
 function resetAll() {
     if (Object.keys(order).length === 0) return;
     
@@ -173,7 +166,7 @@ function resetAll() {
     saveOrder();
     renderOrder();
     
-    // Очищаем все поля формы
+    // очищаем все поля формы
     ['fullname', 'email', 'phone', 'address', 'order-comments', 'delivery-time'].forEach(id => {
         const el = byId(id);
         if (!el) return;
@@ -181,7 +174,7 @@ function resetAll() {
         else el.value = '';
     });
     
-    // Сбрасываем радио кнопки на "Как можно скорее"
+    // сбрасываем радио кнопки на "как можно скорее"
     document.querySelectorAll('input[name="delivery_time"]').forEach(r => {
         if (r.value === 'asap') r.checked = true;
     });
@@ -190,7 +183,7 @@ function resetAll() {
     showValorantNotification('Cart cleared', true);
 }
 
-// Сохранение заказа в localStorage
+// сохранение заказа в localStorage
 function saveOrder() {
     // Сохраняем в формате для корзины
     const cartItems = Object.values(order).map(item => ({
@@ -339,7 +332,7 @@ function renderOrder() {
         price.style.minWidth = '80px';
         price.style.textAlign = 'right';
         
-        // Кнопка удалить
+        // кнопка удалить
         const removeBtn = document.createElement('button');
         removeBtn.textContent = '×';
         removeBtn.style.cssText = `
@@ -381,11 +374,11 @@ function renderOrder() {
     
     totalEl.textContent = formatPrice(total);
     
-    // Обновляем счетчик в заголовке
+    // обновляем счетчик в заголовке
     updateCartCounter();
 }
 
-// Обновление счетчика товаров в корзине
+// обновление счетчика товаров в корзине
 function updateCartCounter() {
     const cartCount = document.querySelector('.cart-count');
     if (!cartCount) return;
@@ -395,16 +388,15 @@ function updateCartCounter() {
     cartCount.style.display = count > 0 ? 'inline' : 'none';
 }
 
-// -----------------------------
+
 // РЕНДЕР СКИНОВ
-// -----------------------------
 function renderSkins() {
     const weaponGrid = document.querySelector('#weapon-items .items-grid');
     const meleeGrid = document.querySelector('#melee-items .items-grid');
     
     if (!weaponGrid || !meleeGrid) return;
     
-    // Очищаем гриды
+    // очищаем гриды
     weaponGrid.innerHTML = '';
     meleeGrid.innerHTML = '';
     
@@ -433,9 +425,9 @@ function renderSkins() {
     });
 }
 
-// -----------------------------
+
 // ФИЛЬТРЫ
-// -----------------------------
+
 function initFilters() {
     // Фильтры для оружия
     document.querySelectorAll('#weapon-items .filter-btn').forEach(btn => {
@@ -466,9 +458,8 @@ function initFilters() {
     });
 }
 
-// -----------------------------
+
 // КОМБО
-// -----------------------------
 function initComboClicks() {
     document.querySelectorAll('#skin-bundles .combo').forEach(el => {
         el.addEventListener('click', () => {
@@ -507,9 +498,9 @@ function initComboClicks() {
     });
 }
 
-// -----------------------------
+
 // КНОПКИ ДОБАВЛЕНИЯ
-// -----------------------------
+
 function initAddButtons() {
     document.querySelectorAll('.item .add-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -533,9 +524,9 @@ function initAddButtons() {
     });
 }
 
-// -----------------------------
+
 // СОРТИРОВКА ПО ЦЕНЕ
-// -----------------------------
+
 function initSorting() {
     const sortAscBtn = document.createElement('button');
     sortAscBtn.textContent = 'PRICE ↑';
@@ -556,7 +547,7 @@ function initSorting() {
     sortDescBtn.textContent = 'PRICE ↓';
     sortDescBtn.style.cssText = sortAscBtn.style.cssText;
     
-    // Контейнер для кнопок сортировки
+    // контейнер для кнопок сортировки
     const sortContainer = document.createElement('div');
     sortContainer.style.cssText = `
         display: flex;
@@ -567,14 +558,14 @@ function initSorting() {
     sortContainer.appendChild(sortAscBtn);
     sortContainer.appendChild(sortDescBtn);
     
-    // Добавляем перед сеткой товаров
+    // добавляем перед сеткой товаров
     const weaponSection = document.getElementById('weapon-items');
     if (weaponSection) {
         const itemsGrid = weaponSection.querySelector('.items-grid');
         weaponSection.insertBefore(sortContainer, itemsGrid);
     }
     
-    // Функция сортировки
+    // функция сортировки по цене
     function sortItems(order) {
         const sections = ['#weapon-items .items-grid', '#melee-items .items-grid'];
         
@@ -594,14 +585,14 @@ function initSorting() {
             items.forEach(item => grid.appendChild(item));
         });
         
-        // Обновляем кнопки после сортировки
+        // обновляем кнопки после сортировки
         initAddButtons();
     }
     
     sortAscBtn.addEventListener('click', () => sortItems('asc'));
     sortDescBtn.addEventListener('click', () => sortItems('desc'));
     
-    // Эффекты наведения
+    // эффекты наведения
     [sortAscBtn, sortDescBtn].forEach(btn => {
         btn.addEventListener('mouseenter', () => {
             btn.style.background = '#ff4654';
@@ -614,9 +605,9 @@ function initSorting() {
     });
 }
 
-// -----------------------------
+
 // ВАЛИДАЦИЯ И ОТПРАВКА
-// -----------------------------
+
 function validateForm() {
     const errors = [];
     
@@ -649,9 +640,9 @@ function showMessage(text, isError = true) {
     showValorantNotification(text, isError);
 }
 
-// -----------------------------
+
 // ВРЕМЯ ДОСТАВКИ
-// -----------------------------
+
 function toggleTimeInput() {
     const specified = document.querySelector('input[name="delivery_time"][value="specified"]')?.checked;
     const timeInput = byId('delivery-time') || byId('time-input');
@@ -677,9 +668,9 @@ function initDeliveryRadio() {
     toggleTimeInput();
 }
 
-// -----------------------------
+
 // КНОПКИ СБРОСА
-// -----------------------------
+
 function initClearOrder() {
     const clearBtn = byId('clear-order');
     if (clearBtn) {
@@ -699,9 +690,9 @@ function initResetButton() {
     }
 }
 
-// -----------------------------
+
 // ОТПРАВКА ЗАКАЗА
-// -----------------------------
+
 async function submitOrder() {
     const errors = validateForm();
     
@@ -750,7 +741,7 @@ async function submitOrder() {
     if (!SUBMIT_URL) {
         console.log("Order payload:", payload);
         
-        // Сохраняем в историю заказов
+        // сохраняем в историю заказов
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         orders.push(payload);
         localStorage.setItem('orders', JSON.stringify(orders));
@@ -771,7 +762,7 @@ async function submitOrder() {
         
         if (!resp.ok) throw new Error(`Server error: ${resp.status}`);
         
-        // Сохраняем в историю
+        // сохраняем в историю
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
         orders.push({
             ...payload,
@@ -790,9 +781,9 @@ async function submitOrder() {
     }
 }
 
-// -----------------------------
-// ПОПАП
-// -----------------------------
+
+
+
 function showSuccessPopup() {
     const popup = byId('success-popup');
     const okBtn = byId('ok-btn') || byId('popup-ok-btn');
@@ -801,7 +792,7 @@ function showSuccessPopup() {
     
     popup.classList.remove('hidden');
     
-    // Обновляем содержимое попапа
+   
     const popupContent = popup.querySelector('.popup-content');
     if (popupContent) {
         popupContent.innerHTML = `
@@ -824,9 +815,8 @@ function showSuccessPopup() {
     });
 }
 
-// -----------------------------
 // ИНИЦИАЛИЗАЦИЯ
-// -----------------------------
+
 function init() {
     console.log("Valorant Skins Marketplace - Initializing...");
     
@@ -847,7 +837,7 @@ function init() {
     
     renderOrder();
     
-    // Добавляем анимации
+    //анимации
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {

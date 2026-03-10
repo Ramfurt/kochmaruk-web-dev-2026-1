@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Valorant';
-    src: url('fonts/Valorant-Font.ttf') format('truetype'); 
+    src: url('fonts/Valorant-Font.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -15,34 +15,31 @@
     font-display: swap;
 }
 
+
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #0f1923; 
-    margin-left: 50px;
-    margin-right: 50px;
     color: #ece8e1; 
     min-height: 100vh;
-    font-size: 25px;
+    font-size: 1.1rem;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 0 200px;
     font-family: 'perpetua', 'Times New Roman', serif;
 }
 
 
 .up_name h1 {
-    font-family: 'Valorant', 'TrajanPro', serif !important;
-    font-size: 80px;
+    font-family: 'Valorant', 'TrajanPro', serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ff4654; 
+    color: #ff4654;
     text-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
-    margin-bottom: 3px;
+    margin: 20px 0 5px;
 }
 
 
@@ -50,32 +47,32 @@ body {
     list-style-type: none;
     padding: 0;
     display: flex;
-    gap: 4%;
-    margin-top: 40px;
+    gap: 1%;
+    margin: 30px 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .buttons li {
-    position: relative;
     text-align: center;
 }
 
 .buttons li a {
     text-decoration: none;
     color: #ece8e1;
-    padding: 10px 20px;
+    padding: 8px 12px;
     display: block;
     transition: all 0.3s ease;
     border: 2px solid transparent;
     border-radius: 5px;
-    min-width: 150px;
+    min-width: 100px;
     font-family: 'Valorant', 'perpetua', serif;
     text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-
 .buttons li a:hover {
-    color: #ff4654; 
+    color: #ff4654;
     border: 2px solid #ff4654;
     background-color: rgba(255, 70, 84, 0.1);
     transform: translateY(-2px);
@@ -84,9 +81,8 @@ body {
 
 
 .about-section {
-    margin: 20px 0;
     background: linear-gradient(145deg, #1f2c3a, #0f1923);
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
     border: 1px solid #ff4654;
     box-shadow: 0 0 20px rgba(255, 70, 84, 0.3);
@@ -97,95 +93,116 @@ body {
     height: auto;
     border-radius: 10px;
     border: 2px solid #ff4654;
-    margin-bottom: 20px;
 }
 
 .about-title {
     color: #ff4654;
     font-family: 'Valorant', serif;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-
-.advantages-list {
-    list-style: none;
-    padding: 0;
-}
-
-.advantages-list li {
-    background: rgba(255, 70, 84, 0.1);
-    border-left: 4px solid #ff4654;
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 0 8px 8px 0;
-    font-size: 24px;
-}
-
-
-table {
-    width: 100%;
-    max-width: 1500px;
-    border-collapse: collapse;
-    margin: 40px auto;
-    background: #1f2c3a;
-    border: 2px solid #ff4654;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-th {
-    background-color: #ff4654;
-    color: #0f1923;
-    padding: 15px;
-    font-size: 24px;
-    font-family: 'Valorant', serif;
     text-transform: uppercase;
 }
 
-td {
-    padding: 15px;
+
+.advantages-list-item {
+    background: rgba(255, 70, 84, 0.1);
+    border-left: 4px solid #ff4654;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.advantages-list-item h3 {
+    color: #ff4654;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Valorant', serif;
+}
+
+.advantages-list-item p {
+    margin: 0;
+    color: #ece8e1;
+}
+
+
+.bg-danger.bg-opacity-10 {
+    background-color: rgba(255, 70, 84, 0.15) !important;
+    border: 1px solid #ff4654;
+}
+
+
+.form-control.bg-dark {
+    background-color: #1a2530 !important;
     border: 1px solid #ff4654;
     color: #ece8e1;
-    font-size: 20px;
+}
+
+.form-control.bg-dark:focus {
+    background-color: #25323f !important;
+    border-color: #ff8a92;
+    box-shadow: 0 0 0 0.25rem rgba(255, 70, 84, 0.3);
 }
 
 
-#contacts {
-    background-color: #1f2c3a;
-    padding: 3px 0;
-    text-align: center;
-    margin-top: auto;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    border-top: 3px solid #ff4654;
-}
-
-
-a {
-    color: #ff4654;
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-h2, h3 {
+.table {
     color: #ece8e1;
+    border-color: #ff4654;
+}
+
+.table-dark {
+    --bs-table-bg: #1f2c3a;
+    --bs-table-striped-bg: #25323f;
+    --bs-table-border-color: #ff4654;
+}
+
+.table thead th {
+    background-color: #ff4654 !important;
+    color: #0f1923 !important;
+    font-family: 'Valorant', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+/* Футер */
+#contacts-footer,
+footer {
+    background-color: #1f2c3a;
+    padding: 20px 0;
+    border-top: 3px solid #ff4654;
+    color: #ece8e1;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Типографика */
+h2, h3 {
     font-family: 'Valorant', 'perpetua', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #ece8e1;
 }
 
 h2 {
     color: #ff4654;
-    font-size: 36px;
-    border-bottom: 2px solid #ff4654;
-    padding-bottom: 10px;
-    margin: 30px 0;
+    font-size: 2.2rem;
+}
+
+/* Общие утилиты */
+a {
+    color: #ff4654;
+}
+a:hover {
+    color: #ff8a92;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .buttons li a {
+        min-width: 120px;
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+    .about-title.display-4 {
+        font-size: 2.5rem;
+    }
 }
