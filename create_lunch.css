@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'perpetua';
+    src: url('fonts/perpetua.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanPro';
+    src: url('TrajanPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Valorant';
+    src: url('fonts/Valorant-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f1923;
+    color: #ece8e1;
+    min-height: 100vh;
+    font-size: 25px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 200px;
+    font-family: 'perpetua', 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.up_name {
+    margin-bottom: 3px;
+}
+
+.up_name h1 {
+    font-family: 'Valorant', 'TrajanPro', serif !important;
+    font-size: 80px;
+    color: #ff4654;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+/* Навигация */
+.buttons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 4%;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons li {
+    position: relative;
+    text-align: center;
+}
+
+.buttons li a {
+    text-decoration: none;
+    color: #ece8e1;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    min-width: 150px;
+    font-family: 'Valorant', 'perpetua', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.buttons li a:hover {
+    color: #ffffff;
+    border: 2px solid #ff4654;
+    background-color: rgba(255, 70, 84, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 70, 84, 0.3);
+}
+
+/* Заголовки секций */
+.centered-title {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+.centered-title h2 {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff4654;
+    letter-spacing: 2px;
+}
+
+.section h2 {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+    font-size: 36px;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+/* Комбо-наборы */
+.combos {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.combo {
+    background: linear-gradient(145deg, #1f2c3a, #0f1923);
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #ff4654;
+    flex: 1 1 30%;
+    min-width: 280px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 70, 84, 0.2);
+}
+
+.combo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 70, 84, 0.4);
+    border-color: #ff6a76;
+}
+
+.combo h3 {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.combo-items {
+    color: #ece8e1;
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.combo-meta {
+    color: #ff4654;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px solid #ff4654;
+    padding-top: 10px;
+}
+
+/* Фильтры */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn, .drink-filter-btn, .melee-filter-btn {
+    padding: 12px 25px;
+    background: #1f2c3a;
+    border: 2px solid #ff4654;
+    color: #ece8e1;
+    font-family: 'Valorant', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .drink-filter-btn:hover, .melee-filter-btn:hover {
+    background: #ff4654;
+    color: #0f1923;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 70, 84, 0.4);
+}
+
+.filter-btn.active, .drink-filter-btn.active, .melee-filter-btn.active {
+    background: #ff4654;
+    color: #0f1923;
+    border-color: #ff4654;
+}
+
+/* Сетка элементов */
+.items-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 30px 0;
+}
+
+.item {
+    background: linear-gradient(145deg, #1f2c3a, #0f1923);
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(25% - 23px);
+    min-width: 250px;
+    border: 2px solid #ff4654;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 70, 84, 0.4);
+}
+
+.item img {
+    width: 100%;          
+    height: 200px;       
+    object-fit: cover;     
+    border-radius: 10px;   
+    border: 2px solid #ff4654; 
+    margin-bottom: 15px;
+}
+
+.item-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.item-info h4 {
+    color: #ece8e1;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Valorant', serif;
+}
+
+.item-info .price {
+    color: #ff4654;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff4654;
+    color: #0f1923;
+    font-family: 'Valorant', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.add-btn:hover {
+    background: #ff6a76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 70, 84, 0.4);
+}
+
+/* Кнопки действий */
+.primary-btn, .secondary-btn {
+    padding: 15px 30px;
+    font-family: 'Valorant', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary-btn {
+    background: #ff4654;
+    color: #0f1923;
+}
+
+.primary-btn:hover {
+    background: #ff6a76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 70, 84, 0.5);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #ff4654;
+    border: 2px solid #ff4654;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 70, 84, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Футер */
+#contacts {
+    background-color: #1f2c3a;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 3px solid #ff4654;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+#contacts p {
+    color: #ece8e1;
+    font-size: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    body {
+        padding: 0 100px;
+    }
+    
+    .item {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 50px;
+    }
+    
+    .up_name h1 {
+        font-size: 50px;
+    }
+    
+    .item {
+        width: calc(50% - 15px);
+    }
+    
+    .combo {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 100%;
+    }
+}

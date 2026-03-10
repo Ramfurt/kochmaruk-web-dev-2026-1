@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'perpetua';
+    src: url('fonts/perpetua.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrajanPro';
+    src: url('TrajanPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Valorant';
+    src: url('fonts/Valorant-Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f1923;
+    color: #ece8e1;
+    min-height: 100vh;
+    font-size: 25px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 200px;
+    font-family: 'perpetua', 'Times New Roman', serif;
+}
+
+/* Заголовок */
+.up_name {
+    margin-bottom: 3px;
+}
+
+.up_name h1 {
+    font-family: 'Valorant', 'TrajanPro', serif !important;
+    font-size: 80px;
+    color: #ff4654;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Навигация */
+.buttons {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 4%;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons li {
+    position: relative;
+    text-align: center;
+}
+
+.buttons li a {
+    text-decoration: none;
+    color: #ece8e1;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    min-width: 150px;
+    font-family: 'Valorant', 'perpetua', serif;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.buttons li a:hover {
+    color: #ffffff;
+    border: 2px solid #ff4654;
+    background-color: rgba(255, 70, 84, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 70, 84, 0.3);
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    background: linear-gradient(145deg, #1f2c3a, #0f1923);
+    border: 2px solid #ff4654;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 70, 84, 0.2);
+}
+
+thead th {
+    background: #ff4654;
+    color: #0f1923;
+    padding: 20px;
+    font-family: 'Valorant', serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ff4654;
+}
+
+tbody td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ff4654;
+    color: #ece8e1;
+    font-size: 18px;
+}
+
+tbody tr:hover {
+    background: rgba(255, 70, 84, 0.1);
+}
+
+/* Иконки действий */
+td i {
+    color: #ff4654;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+td i:hover {
+    color: #ff6a76;
+    transform: scale(1.2);
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 25, 35, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #1f2c3a, #0f1923);
+    margin: 5% auto;
+    padding: 40px;
+    border: 3px solid #ff4654;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(255, 70, 84, 0.5);
+}
+
+.modal-content h2 {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.close {
+    color: #ff4654;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff6a76;
+}
+
+/* Форма в модальном окне */
+#editForm label {
+    display: block;
+    margin: 15px 0 5px 0;
+    color: #ece8e1;
+    font-family: 'Valorant', serif;
+    font-size: 18px;
+}
+
+#editForm input,
+#editForm textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0f1923;
+    border: 2px solid #ff4654;
+    border-radius: 8px;
+    color: #ece8e1;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#editForm input:focus,
+#editForm textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 70, 84, 0.5);
+}
+
+/* Кнопки в модальных окнах */
+.modal-content button {
+    padding: 12px 25px;
+    margin: 10px 10px 0 0;
+    background: #ff4654;
+    color: #0f1923;
+    font-family: 'Valorant', serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: #ff6a76;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 70, 84, 0.4);
+}
+
+.modal-content button[type="button"] {
+    background: transparent;
+    border: 2px solid #ff4654;
+    color: #ff4654;
+}
+
+.modal-content button[type="button"]:hover {
+    background: rgba(255, 70, 84, 0.1);
+}
+
+/* Детали заказа */
+#orderDetails {
+    margin: 20px 0;
+}
+
+#orderDetails p {
+    color: #ece8e1;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 70, 84, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ff4654;
+}
+
+#orderDetails strong {
+    color: #ff4654;
+    font-family: 'Valorant', serif;
+}
+
+/* Футер */
+#contacts {
+    background-color: #1f2c3a;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+    border-top: 3px solid #ff4654;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+#contacts p {
+    color: #ece8e1;
+    font-size: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    body {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 50px;
+    }
+    
+    .up_name h1 {
+        font-size: 50px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    thead th {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    tbody td {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+}

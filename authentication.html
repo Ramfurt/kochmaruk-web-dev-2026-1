@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Valorant Skins Marketplace">
+    <title>Login - Valorant Skins</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="authentication.css">
+</head>
+<body>
+    <div class="up_name">
+        <h1>VALORANT SKINS</h1>
+    </div>
+    
+    <header>
+        <nav>
+            <ul class="buttons">
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="#contacts">CONTACT</a></li>
+                <li><a href="create_lunch.html">BROWSE SKINS</a></li>
+                <li><a href="place_an_order.html">CHECKOUT</a></li>
+                <li><a href="order.html">ORDERS</a></li>
+                <li><a href="feedback_form.html">FEEDBACK</a></li>
+                <li><a href="authentication.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="auth-container">
+        <h1 style="color: #ff4654; text-align: center;">LOGIN TO ACCOUNT</h1>
+        <form action="https://httpbin.org/post" method="post">
+            <label for="login"><h2>Username:</h2></label>
+            <input type="text" id="login" name="login" required placeholder="Enter your username">
+            
+            <label for="password"><h2>Password:</h2></label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="remember" name="remember">
+                <h2>Remember me</h2>
+            </label>
+            
+            <button type="submit"><h3>LOGIN</h3></button>
+            <p style="text-align: center; margin-top: 15px;">
+                Don't have an account? <a href="register.html">Register here</a>
+            </p>
+        </form>
+    </div>
+    
+    <footer id="contacts">
+        <p><h2>&copy; 2025 VALORANT SKINS MARKETPLACE</h2></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

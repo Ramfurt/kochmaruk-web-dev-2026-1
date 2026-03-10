@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valorant Skins Marketplace - Share your feedback">
+    <meta name="author" content="Ramfurt">
+    <title>Feedback - Valorant Skins</title>
+    
+    
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    
+    <link rel="stylesheet" href="feedback_form.css">
+    
+    
+    <meta property="og:title" content="Valorant Skins Marketplace">
+    <meta property="og:description" content="Buy and sell premium Valorant skins">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/valorant-logo.png">
+    <meta property="og:url" content="https://your-site.com">
+    
+    <style>
+        
+        body {
+            background-color: #0f1923;
+            color: #ece8e1;
+            font-family: 'perpetua', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0 200px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .up_name {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .up_name h1 {
+            font-family: 'Valorant', 'TrajanPro', serif;
+            color: #ff4654;
+            font-size: 80px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 70, 84, 0.5);
+            margin: 0;
+        }
+        
+        .buttons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .buttons li a {
+            text-decoration: none;
+            color: #ece8e1;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            font-family: 'Valorant', sans-serif;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+        
+        .buttons li a:hover {
+            color: #ff4654;
+            border-color: #ff4654;
+            background: rgba(255, 70, 84, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            background: linear-gradient(145deg, #1f2c3a, #0f1923);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #ff4654;
+            box-shadow: 0 0 30px rgba(255, 70, 84, 0.3);
+            margin: 50px 0;
+            width: 100%;
+        }
+        
+        .container h1 {
+            color: #ff4654;
+            font-family: 'Valorant', sans-serif;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin: 20px 0 5px 0;
+            color: #ece8e1;
+            font-family: 'Valorant', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        label h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #ece8e1;
+            font-family: 'perpetua', serif;
+            text-transform: none;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #0f1923;
+            border: 2px solid #ff4654;
+            border-radius: 10px;
+            color: #ece8e1;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 70, 84, 0.5);
+            transform: scale(1.01);
+        }
+        
+        input[type="radio"] {
+            accent-color: #ff4654;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 70, 84, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #ff4654;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #ff4654;
+        }
+        
+        button[type="submit"] {
+            padding: 15px 30px;
+            background: #ff4654;
+            color: #0f1923;
+            font-family: 'Valorant', sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+        
+        button[type="submit"]:hover {
+            background: #ff6a76;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 70, 84, 0.5);
+        }
+        
+        #contacts {
+            background-color: #1f2c3a;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+            border-top: 3px solid #ff4654;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+        
+        #contacts p {
+            color: #ece8e1;
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        
+        #contacts h2 {
+            color: #ff4654;
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        @media (max-width: 1200px) {
+            body {
+                padding: 0 100px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0 50px;
+            }
+            
+            .up_name h1 {
+                font-size: 50px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .container h1 {
+                font-size: 36px;
+            }
+            
+            .buttons li a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <div class="up_name">
+        <h1>VALORANT SKINS</h1>
+    </div>
+    
+    <!-- Навигационное меню с правильными названиями -->
+    <header>
+        <nav>
+            <ul class="buttons">
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="#contacts">CONTACT</a></li>
+                <li><a href="create_lunch.html">BROWSE SKINS</a></li>
+                <li><a href="place_an_order.html">CHECKOUT</a></li>
+                <li><a href="order.html">ORDERS</a></li>
+                <li><a href="feedback_form.html">FEEDBACK</a></li>
+                <li><a href="authentication.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Форма обратной связи -->
+    <div class="container">
+        <h1>FEEDBACK FORM</h1>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+            <!-- ФИО -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            
+            <!-- Откуда узнали -->
+            <p><h2 style="color: #ff4654;">How did you hear about us?</h2></p>
+            
+            <label>
+                <input type="radio" name="source" value="social_media" required>
+                <h3>Social Media (Discord, Twitter, etc.)</h3>
+            </label>
+            
+            <label>
+                <input type="radio" name="source" value="friend">
+                <h3>From a friend</h3>
+            </label>
+            
+            <label>
+                <input type="radio" name="source" value="streamer">
+                <h3>From a streamer</h3>
+            </label>
+            
+            <label>
+                <input type="radio" name="source" value="advertisement">
+                <h3>Advertisement</h3>
+            </label>
+            <br>
+            
+            <!-- Тип обращения -->
+            <label for="type"><h3>Reason for contact:</h3></label>
+            <select id="type" name="type" required>
+                <option value="">Select type</option>
+                <option value="problem">Report a problem with the service</option>
+                <option value="suggestion">Make a suggestion to improve</option>
+                <option value="question">General question</option>
+                <option value="bug">Report a bug on the website</option>
+                <option value="partnership">Partnership inquiry</option>
+            </select>
+            
+            <!-- Текст сообщения -->
+            <label for="message"><h3>Message:</h3></label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            
+            <!-- Вложения -->
+            <label for="attachment"><h3>Attachments (screenshots, etc.):</h3></label>
+            <input type="file" id="attachment" name="attachment" accept="image/*">
+            
+            <!-- Согласие на обработку -->
+            <label class="checkbox-label">
+                <input type="checkbox" name="consent" required>
+                <h3>I agree to the processing of my personal data</h3>
+            </label>
+            
+            <!-- Кнопка отправки -->
+            <button type="submit"><h3>SUBMIT FEEDBACK</h3></button>
+        </form>
+    </div>
+    
+    <!-- Футер -->
+    <footer id="contacts">
+        <p><h2>&copy; 2025 VALORANT SKINS MARKETPLACE</h2></p>
+        <p>support@valorantskins.com | Discord: .gg/valorantskins</p>
+    </footer>
+    
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
